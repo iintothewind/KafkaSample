@@ -35,6 +35,7 @@ shellPrompt := { s => Project.extract(s).currentProject.id + "> " }
 
 lazy val log4jVersion = "2.11.0"
 lazy val scalazVersion = "7.2.20"
+lazy val kafkaVersion = "1.1.0"
 lazy val latest = "latest.integration"
 
 libraryDependencies ++= Seq(
@@ -43,6 +44,8 @@ libraryDependencies ++= Seq(
   "org.apache.logging.log4j" % "log4j-core" % log4jVersion,
   "org.apache.logging.log4j" % "log4j-slf4j-impl" % log4jVersion,
   "com.typesafe.scala-logging" %% "scala-logging" % "3.8.0",
+  "org.apache.kafka" %% "kafka" % kafkaVersion,
+  "org.apache.kafka" % "kafka-streams" % kafkaVersion,
   "org.scalaz" %% "scalaz-core" % scalazVersion,
   "org.scalaz" %% "scalaz-concurrent" % scalazVersion,
   "com.google.guava" % "guava" % "24.0-jre",
